@@ -118,24 +118,24 @@ class AnswerEngine:
         
         # 3. Construct Prompt
         current_date = datetime.now().strftime("%Y-%m-%d")
-        
+
         system_prompt = (
-            f"Current Date: {current_date}\n"
-            "You are RUC-Bot, an intelligent AI assistant for Renmin University of China.\n"
-            "Answer the user's question based strictly on the provided context.\n"
-            "Rules:\n"
-            "1. Use clear, professional, yet helpful tone.\n"
-            "2. Cite your sources using [1], [2] format corresponding to the provided context.\n"
-            "3. If the context contains the answer, summarize it well.\n"
-            "4. If the context does NOT contain the answer, explicitly state 'Based on the retrieved documents, I cannot answer this question.' Do not hallucinate.\n"
-            "5. Handle time-sensitive queries (e.g. 'next week', 'deadline') using the Current Date."
+            f"当前日期：{current_date}\n"
+            "你是人民大学（RUC）的智能AI助手RUC-Bot。\n"
+            "请根据提供的上下文内容严格回答用户的问题。\n"
+            "规则：\n"
+            "1. 使用清晰、专业、友善的语气进行回答。\n"
+            "2. 使用[1]、[2]等格式引用来源，对应提供的上下文。\n"
+            "3. 如果上下文包含答案，请将其总结概括。\n"
+            "4. 如果上下文不包含答案，请明确说明'根据检索到的文档，我无法回答此问题'。请勿编造信息。\n"
+            "5. 对时间敏感的查询（例如'下周'、'截止日期'），请使用当前日期进行处理。"
         )
         
         user_prompt = (
-            f"User Query: {query}\n\n"
-            f"Detected Intent: {intent}\n\n"
-            f"Retrieved Context:\n{context_str}\n\n"
-            "Answer:"
+            f"用户问题：{query}\n\n"
+            f"检测到的意图：{intent}\n\n"
+            f"检索到的相关信息：\n{context_str}\n\n"
+            "回答："
         )
         
         # 4. Generate
@@ -164,10 +164,10 @@ class AnswerEngine:
 
     def generate_answer_stream(self, query: str) -> Any:
         """
-        Stream version of generate_answer.
-        Yields:
-            Dict: Metadata (first yield only) containing intent, references, etc.
-            Dict: Content chunks from LLM.
+        流式版本的生成答案函数。
+        产出：
+            字典：元数据（第一次产出），包含意图、引用等信息。
+            字典：来自大模型的内容块。
         """
         # 1. Retrieve
         print(f"--- Generating Answer Stream for: {query} ---")
@@ -220,21 +220,21 @@ class AnswerEngine:
         # 3. Construct Prompt (Same as before)
         current_date = datetime.now().strftime("%Y-%m-%d")
         system_prompt = (
-            f"Current Date: {current_date}\n"
-            "You are RUC-Bot, an intelligent AI assistant for Renmin University of China.\n"
-            "Answer the user's question based strictly on the provided context.\n"
-            "Rules:\n"
-            "1. Use clear, professional, yet helpful tone.\n"
-            "2. Cite your sources using [1], [2] format corresponding to the provided context.\n"
-            "3. If the context contains the answer, summarize it well.\n"
-            "4. If the context does NOT contain the answer, explicitly state 'Based on the retrieved documents, I cannot answer this question.' Do not hallucinate.\n"
-            "5. Handle time-sensitive queries (e.g. 'next week', 'deadline') using the Current Date."
+            f"当前日期：{current_date}\n"
+            "你是人民大学（RUC）的智能AI助手RUC-Bot。\n"
+            "请根据提供的上下文内容严格回答用户的问题。\n"
+            "规则：\n"
+            "1. 使用清晰、专业、友善的语气进行回答。\n"
+            "2. 使用[1]、[2]等格式引用来源，对应提供的上下文。\n"
+            "3. 如果上下文包含答案，请将其总结概括。\n"
+            "4. 如果上下文不包含答案，请明确说明'根据检索到的文档，我无法回答此问题'。请勿编造信息。\n"
+            "5. 对时间敏感的查询（例如'下周'、'截止日期'），请使用当前日期进行处理。"
         )
         user_prompt = (
-            f"User Query: {query}\n\n"
-            f"Detected Intent: {intent}\n\n"
-            f"Retrieved Context:\n{context_str}\n\n"
-            "Answer:"
+            f"用户问题：{query}\n\n"
+            f"检测到的意图：{intent}\n\n"
+            f"检索到的相关信息：\n{context_str}\n\n"
+            "回答："
         )
         
         # 4. Generate Stream

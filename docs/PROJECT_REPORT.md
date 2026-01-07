@@ -1,7 +1,6 @@
-# Enhanced RUC Search 项目技术报告
+# RUC-Pilot 项目技术报告
 
 **日期**: 2026-01-06  
-**作者**: AI Engineer (Cline)
 
 ---
 

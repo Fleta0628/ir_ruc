@@ -10,7 +10,7 @@ if parent_dir not in sys.path:
     sys.path.append(parent_dir)
 
 st.set_page_config(
-    page_title="RUC Search",
+    page_title="RUC-Pilot",
     page_icon="🎓",
     layout="centered"
 )
@@ -74,7 +74,7 @@ def display_references(references, debug_mode):
                     st.text(ref["details"].get("raw_content", ""))
 
 def main():
-    st.title("🎓 Enhanced RUC Search")
+    st.title("🎓 RUC-Pilot")
     st.caption("Data-Centric AI 驱动的校园问答引擎 | Powered by Qwen2.5 & RAG")
 
     if "messages" not in st.session_state:

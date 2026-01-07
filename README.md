@@ -1,4 +1,4 @@
-# 🎓 Enhanced RUC Search (增强版人大校园搜索)
+# 🎓 RUC-Pilot (人大校园智能问答助手)
 
 基于 **RAG (检索增强生成)** 与 **PageRank** 算法构建的下一代校园智能问答系统。
 

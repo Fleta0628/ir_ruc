@@ -1,4 +1,4 @@
-# Enhanced RUC Search (增强版人大校园搜索)
+# RUC-Pilot (人大校园智能问答助手)
 
 本项目旨在构建一个基于 **RAG (Retrieval-Augmented Generation)** 的下一代场景化校园搜索引擎。
 
