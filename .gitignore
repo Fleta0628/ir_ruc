@@ -1,0 +1,30 @@
+# Data Files (Too large for GitHub)
+*.jsonl
+processed_data/*.jsonl
+crawled_data_deduplicated.jsonl
+crawled_data.jsonl
+
+# Generated Results & Indexes
+pagerank_results.json
+task2/chroma_db/
+task3/bm25_index.pkl
+
+# Logs
+*.log
+running.log
+
+# Scrapy Cache
+crawls/
+.scrapy/
+
+# Python Cache & Env
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# System Files
+.DS_Store
+.vscode/
+.idea/

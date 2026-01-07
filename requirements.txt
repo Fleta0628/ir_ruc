@@ -1,0 +1,15 @@
+scrapy
+networkx
+langchain
+langchain-community
+chromadb
+openai
+tiktoken
+vllm
+streamlit
+pandas
+jieba
+scikit-learn
+rank_bm25
+transformers
+accelerate
